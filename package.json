@@ -1,11 +1,15 @@
 {
   "name": "monorepo-playground",
   "private": true,
-  "devDependencies": {
-    "turbo": "^2.5.8"
-  },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.0.0",
+    "eslint": "^9.37.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.10",
+    "eslint-plugin-format": "^1.0.2",
+    "turbo": "^2.5.8"
   }
 }
