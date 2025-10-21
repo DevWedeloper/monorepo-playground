@@ -5,6 +5,9 @@
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "build": "turbo run build"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",
     "@eslint-react/eslint-plugin": "^2.2.2",

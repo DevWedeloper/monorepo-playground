@@ -10,7 +10,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "noPropertyAccessFromIndexSignature": false,
     "importHelpers": true,
     "isolatedModules": true,
     "skipLibCheck": true
