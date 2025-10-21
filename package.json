@@ -6,7 +6,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "dev": "turbo run dev"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",
