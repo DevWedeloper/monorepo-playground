@@ -24,6 +24,15 @@ importers:
         specifier: ^2.5.8
         version: 2.5.8
 
+  packages/tailwind-config:
+    devDependencies:
+      postcss:
+        specifier: ^8.5.3
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^4.1.5
+        version: 4.1.15
+
 packages:
 
   '@antfu/eslint-config@6.0.0':
