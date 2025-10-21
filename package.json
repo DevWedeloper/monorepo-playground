@@ -7,9 +7,13 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",
+    "@eslint-react/eslint-plugin": "^2.2.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "eslint": "^9.37.0",
     "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-format": "^1.0.2",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.23",
     "turbo": "^2.5.8"
   }
 }
