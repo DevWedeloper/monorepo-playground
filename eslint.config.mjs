@@ -1,10 +1,12 @@
 import antfu from '@antfu/eslint-config'
 import tsParser from '@typescript-eslint/parser'
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
+import svelteParser from 'svelte-eslint-parser'
 
 export default antfu({
   formatters: true,
   react: true,
+  svelte: true,
 }, {
   files: ['**/*.ts', '**/*.tsx', '**/*.jsx'],
   languageOptions: {
@@ -12,6 +14,11 @@ export default antfu({
   },
   rules: {
     'no-undef': 'off',
+  },
+}, {
+  files: ['**/*.svelte'],
+  languageOptions: {
+    parser: svelteParser,
   },
 }, {
   plugins: {
