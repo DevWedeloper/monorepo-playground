@@ -3,7 +3,7 @@
     import.meta.glob('/src/routes/**/+page.svelte', {
       eager: true,
     }),
-  ).map(key => key.replace(/\/src\/routes\/|\/?\+page\.svelte/g, ''))
+  ).map(key => key.replace(/\/src\/routes\/|\/?\+page\.svelte/g, '')).sort((a, b) => a.localeCompare(b))
 </script>
 
 <section class='max-w-3xl mx-auto text-center space-y-8'>
