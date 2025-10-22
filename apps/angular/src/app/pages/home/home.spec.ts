@@ -24,7 +24,7 @@ describe('home', () => {
     expect(screen.getByText('Welcome to Angular Playground!')).toBeVisible()
   })
 
-  it('renders router links from router config', async () => {
+  it('renders router links', async () => {
     await render(Home, {
       providers: [
         provideRouter([
