@@ -4,11 +4,10 @@ import { RouterOutlet } from '@angular/router'
 @Component({
   selector: 'playground-root',
   imports: [RouterOutlet],
-  host: {
-    class: 'block min-h-screen bg-background text-foreground font-sans p-8',
-  },
   template: `
-    <router-outlet />
+    <main class="block min-h-screen bg-background text-foreground font-sans p-8">
+      <router-outlet />
+    </main>
   `,
 })
 export class App {}
