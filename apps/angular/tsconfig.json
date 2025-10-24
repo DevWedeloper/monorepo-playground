@@ -6,6 +6,9 @@
     "target": "ES2022",
     "experimentalDecorators": true,
     "module": "preserve",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
