@@ -8,7 +8,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "inlineTemplate": true,
-          "inlineStyle": true
+          "inlineStyle": true,
+          "changeDetection": "OnPush",
+          "skipTests": true
         }
       },
       "root": "",
