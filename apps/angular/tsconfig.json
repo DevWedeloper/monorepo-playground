@@ -5,6 +5,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "experimentalDecorators": true,
+    "baseUrl": ".",
     "module": "preserve",
     "paths": {
       "@/*": ["./src/*"]
