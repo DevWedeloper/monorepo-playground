@@ -5,7 +5,7 @@ import svelteParser from 'svelte-eslint-parser'
 
 export default antfu({
   formatters: true,
-  react: true,
+  nextjs: true,
   svelte: true,
 }, {
   files: ['**/*.ts', '**/*.tsx', '**/*.jsx'],
