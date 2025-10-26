@@ -58,7 +58,7 @@ export default function NotesPage() {
 
         <div className="flex flex-col items-center mb-4 text-sm">
           <h3 className="font-semibold">Data States</h3>
-          <pre className="whitespace-pre-wrap">
+          <pre className="whitespace-pre-wrap" data-testid="success-states">
             {JSON.stringify(
               {
                 deleteNote: dataDeleteNote || null,
@@ -71,7 +71,7 @@ export default function NotesPage() {
           </pre>
 
           <h3 className="font-semibold mt-2">Loading States</h3>
-          <pre>
+          <pre data-testid="loading-states">
             {JSON.stringify(
               {
                 getNotes: isLoadingGetNotes,
@@ -85,7 +85,7 @@ export default function NotesPage() {
           </pre>
 
           <h3 className="font-semibold mt-2">Error States</h3>
-          <pre className="whitespace-pre-wrap">
+          <pre className="whitespace-pre-wrap" data-testid="error-states">
             {JSON.stringify(
               {
                 getNotes: errorGetNotes,
