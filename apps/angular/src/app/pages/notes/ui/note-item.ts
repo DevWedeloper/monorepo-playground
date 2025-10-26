@@ -1,0 +1,79 @@
+import { NgClass } from '@angular/common'
+import { ChangeDetectionStrategy, Component, input, linkedSignal, output, signal } from '@angular/core'
+import { Note } from '../types/notes'
+import { AutoFocus } from './auto-focus'
+
+@Component({
+  selector: 'playground-note-item',
+  imports: [NgClass, AutoFocus],
+  template: `
+    <li class="flex items-center justify-between border-b py-2">
+      <div class="flex flex-1 items-center gap-2">
+        <input
+          type="checkbox"
+          [checked]="note().completed"
+          (change)="onToggle.emit({ id: note().id, completed: !note().completed })"
+        />
+
+        @if (isEditing()) {
+          <input
+            #editInput
+            type="text"
+            [value]="draft()"
+            (input)="draft.set(editInput.value)"
+            (blur)="handleEdit()"
+            (keydown)="handleKeyDown($event)"
+            class="flex-1 border-b focus:outline-none"
+            playgroundAutoFocus
+          />
+        } @else {
+          <span
+            class="flex-1 cursor-text"
+            [ngClass]="{ 'line-through': note().completed }"
+            (click)="isEditing.set(true)"
+          >
+            {{ draft() }}
+          </span>
+        }
+      </div>
+
+      <button
+        type="button"
+        (click)="onDelete.emit(note().id)"
+        class="ml-2 text-destructive"
+      >
+        ✕
+      </button>
+    </li>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class NoteItem {
+  note = input.required<Note>()
+
+  onToggle = output<{ id: number, completed: boolean }>()
+  onDelete = output<number>()
+  onEdit = output<{ id: number, title: string }>()
+
+  protected isEditing = signal(false)
+  protected draft = linkedSignal(() => this.note().title)
+
+  protected handleEdit(): void {
+    const trimmed = this.draft().trim()
+    if (trimmed !== this.note().title) {
+      this.onEdit.emit({ id: this.note().id, title: trimmed })
+    }
+    this.isEditing.set(false)
+  }
+
+  protected handleKeyDown(event: KeyboardEvent): void {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      this.handleEdit()
+    }
+    else if (event.key === 'Escape') {
+      this.draft.set(this.note().title)
+      this.isEditing.set(false)
+    }
+  }
+}
