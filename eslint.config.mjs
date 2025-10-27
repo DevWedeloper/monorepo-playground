@@ -7,29 +7,25 @@ export default antfu({
   formatters: true,
   react: true,
   svelte: true,
-}, {
-  files: ['**/*.ts', '**/*.tsx', '**/*.jsx'],
+  files: ['**/*.ts', '**/*.tsx', '**/*.jsx', '**/*.svelte'],
   languageOptions: {
     parser: tsParser,
+    overrides: [
+      {
+        files: ['**/*.svelte'],
+        parser: svelteParser,
+      },
+    ],
   },
-  rules: {
-    'no-undef': 'off',
-  },
-}, {
-  files: ['**/*.svelte'],
-  languageOptions: {
-    parser: svelteParser,
-  },
-}, {
   plugins: {
     'better-tailwindcss': eslintPluginBetterTailwindcss,
   },
   rules: {
+    'no-undef': 'off',
     ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
     ...eslintPluginBetterTailwindcss.configs['recommended-error'].rules,
-    'better-tailwindcss/enforce-consistent-line-wrapping': ['off'],
-    'better-tailwindcss/no-unregistered-classes': ['off'],
+    'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+    'better-tailwindcss/no-unregistered-classes': 'off',
   },
-}, {
   ignores: ['**/.angular/**'],
 })
