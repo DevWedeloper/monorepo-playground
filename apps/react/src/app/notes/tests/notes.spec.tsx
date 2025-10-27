@@ -2,8 +2,8 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import NotesLayout from '../layout'
 import NotesPage from '../page'
-import { server } from './mocks/server'
 import { createTodoError, deleteTodoError, getTodosError, updateTodoError } from './mocks/handlers'
+import { server } from './mocks/server'
 
 describe('notes', () => {
   beforeAll(() => server.listen())
@@ -136,7 +136,7 @@ describe('notes', () => {
 
       await userEvent.clear(editInput)
       await userEvent.type(editInput, 'Updated todo 1{Enter}')
-    
+
       expect(loadingPre.textContent).toContain('"updateNote": true')
 
       await waitFor(() => {
