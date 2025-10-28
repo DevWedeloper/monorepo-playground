@@ -10,6 +10,6 @@ export default defineConfig(({ mode }) => ({
     setupFiles: ['./test-setup.ts'],
   },
   resolve: {
-    conditions: mode === 'test' ? ['browser'] : [],
+    conditions: mode === 'test' ? ['browser'] : undefined,
   },
 }))
