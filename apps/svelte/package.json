@@ -13,6 +13,11 @@
     "test:unit": "vitest",
     "test": "npm run test:unit -- --run"
   },
+  "dependencies": {
+    "@tanstack/svelte-query": "^6.0.3",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
+  },
   "devDependencies": {
     "@playground/tailwind-config": "workspace:*",
     "@sveltejs/adapter-auto": "^6.1.0",
