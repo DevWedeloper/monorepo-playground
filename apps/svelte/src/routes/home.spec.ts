@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/svelte'
-import * as routesModule from '@/utils/get-routes'
+import * as routesModule from '@/utils/getRoutes'
 import Home from './+page.svelte'
 
 describe('home.svelte', () => {

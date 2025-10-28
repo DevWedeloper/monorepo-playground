@@ -1,5 +1,5 @@
 <script lang='ts'>
-  import { getRoutes } from '@/utils/get-routes'
+  import { getRoutes } from '@/utils/getRoutes'
 
   const routes = getRoutes()
 </script>

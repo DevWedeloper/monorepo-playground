@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getRoutes } from '@/utils/get-routes'
+import { getRoutes } from '@/utils/getRoutes'
 
 export default function Home() {
   const routes = getRoutes()
