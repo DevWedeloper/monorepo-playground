@@ -5,7 +5,7 @@ import { Router, RouterLink } from '@angular/router'
   selector: 'playground-home',
   imports: [RouterLink],
   host: {
-    class: 'block',
+    class: 'block p-8',
   },
   template: `
     <section class="max-w-3xl mx-auto text-center space-y-8">

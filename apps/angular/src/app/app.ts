@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router'
   selector: 'playground-root',
   imports: [RouterOutlet],
   template: `
-    <main class="block min-h-screen bg-background text-foreground font-sans p-8">
+    <main class="block min-h-screen bg-background text-foreground font-sans">
       <router-outlet />
     </main>
   `,
