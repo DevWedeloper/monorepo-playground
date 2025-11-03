@@ -224,6 +224,9 @@ importers:
       '@playground/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
+      '@playwright/test':
+        specifier: ^1.56.1
+        version: 1.56.1
       '@sveltejs/adapter-auto':
         specifier: ^6.1.0
         version: 6.1.1(@sveltejs/kit@2.47.2(@sveltejs/vite-plugin-svelte@6.2.1(svelte@5.41.1)(vite@7.1.11(@types/node@20.19.23)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.90.0)(terser@5.44.0)(yaml@2.8.1)))(svelte@5.41.1)(vite@7.1.11(@types/node@20.19.23)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.90.0)(terser@5.44.0)(yaml@2.8.1)))

@@ -11,7 +11,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
-    "test": "npm run test:unit -- --run"
+    "test": "npm run test:unit -- --run",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tanstack/svelte-query": "^6.0.3",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@playground/tailwind-config": "workspace:*",
+    "@playwright/test": "^1.56.1",
     "@sveltejs/adapter-auto": "^6.1.0",
     "@sveltejs/kit": "^2.43.2",
     "@sveltejs/vite-plugin-svelte": "^6.2.0",
