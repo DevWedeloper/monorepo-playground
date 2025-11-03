@@ -163,6 +163,9 @@ importers:
       '@playground/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
+      '@playwright/test':
+        specifier: ^1.56.1
+        version: 1.56.1
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.15
