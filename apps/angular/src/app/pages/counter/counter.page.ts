@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core'
 
 @Component({
   selector: 'playground-counter',
-  standalone: true,
   host: {
     class: 'flex items-center justify-center min-h-screen',
   },
