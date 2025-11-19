@@ -1,19 +1,19 @@
 import angularEslintPlugin from '@angular-eslint/eslint-plugin'
+import angularEslintTemplatePlugin from '@angular-eslint/eslint-plugin-template'
 import {
   combine,
   ignores,
   imports,
   javascript,
   node,
+  perfectionist,
   stylistic,
   typescript,
   unicorn,
-  perfectionist,
 } from '@antfu/eslint-config'
 import betterTailwindcssConfig from '@playground/eslint-config/better-tailwindcss'
 import tsParser from '@typescript-eslint/parser'
 import eslintParserAngular from 'angular-eslint'
-import angularEslintTemplatePlugin from '@angular-eslint/eslint-plugin-template'
 
 export default combine(
   ignores(),
