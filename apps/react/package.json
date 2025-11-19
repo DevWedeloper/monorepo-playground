@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.5",
@@ -17,6 +18,8 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@next/eslint-plugin-next": "^16.0.3",
     "@playground/tailwind-config": "workspace:*",
     "@playwright/test": "^1.56.1",
     "@tailwindcss/postcss": "^4",
@@ -27,6 +30,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.38.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.10",
+    "eslint-plugin-format": "^1.0.2",
     "jsdom": "^27.0.1",
     "msw": "^2.11.6",
     "tailwindcss": "^4",

@@ -12,7 +12,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
     "test": "npm run test:unit -- --run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@tanstack/svelte-query": "^6.0.3",
@@ -20,6 +21,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
     "@playground/tailwind-config": "workspace:*",
     "@playwright/test": "^1.56.1",
     "@sveltejs/adapter-auto": "^6.1.0",
@@ -29,8 +31,13 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/svelte": "^5.2.8",
     "@testing-library/user-event": "^14.6.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.10",
+    "eslint-plugin-format": "^1.0.2",
+    "eslint-plugin-svelte": "^3.13.0",
     "svelte": "^5.39.5",
     "svelte-check": "^4.3.2",
+    "svelte-eslint-parser": "^1.4.0",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
