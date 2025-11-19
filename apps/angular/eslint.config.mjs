@@ -1,5 +1,6 @@
 import angularEslintPlugin from '@angular-eslint/eslint-plugin'
 import angularEslintTemplatePlugin from '@angular-eslint/eslint-plugin-template'
+import angularEslintTemplateParser from '@angular-eslint/template-parser'
 import {
   combine,
   ignores,
@@ -13,7 +14,6 @@ import {
 } from '@antfu/eslint-config'
 import betterTailwindcssConfig from '@playground/eslint-config/better-tailwindcss'
 import tsParser from '@typescript-eslint/parser'
-import eslintParserAngular from 'angular-eslint'
 
 export default combine(
   ignores(),
@@ -32,7 +32,7 @@ export default combine(
     plugins: {
       '@angular-eslint': angularEslintPlugin,
     },
-    processor: eslintParserAngular.processInlineTemplates,
+    processor: angularEslintTemplatePlugin.processors['extract-inline-html'],
     rules: {
       ...angularEslintPlugin.configs.recommended.rules,
     },
@@ -40,7 +40,7 @@ export default combine(
   {
     files: ['**/*.html'],
     languageOptions: {
-      parser: eslintParserAngular.templateParser,
+      parser: angularEslintTemplateParser,
     },
     plugins: {
       '@angular-eslint/template': angularEslintTemplatePlugin,
