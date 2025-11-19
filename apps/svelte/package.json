@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
+    "@playground/eslint-config": "workspace:*",
     "@playground/tailwind-config": "workspace:*",
     "@playwright/test": "^1.56.1",
     "@sveltejs/adapter-auto": "^6.1.0",
@@ -32,7 +33,6 @@
     "@testing-library/svelte": "^5.2.8",
     "@testing-library/user-event": "^14.6.1",
     "eslint": "^9.38.0",
-    "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-format": "^1.0.2",
     "eslint-plugin-svelte": "^3.13.0",
     "svelte": "^5.39.5",

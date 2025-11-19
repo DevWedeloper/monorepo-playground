@@ -20,6 +20,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
     "@next/eslint-plugin-next": "^16.0.3",
+    "@playground/eslint-config": "workspace:*",
     "@playground/tailwind-config": "workspace:*",
     "@playwright/test": "^1.56.1",
     "@tailwindcss/postcss": "^4",
@@ -31,7 +32,6 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.0.4",
     "eslint": "^9.38.0",
-    "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-format": "^1.0.2",
     "jsdom": "^27.0.1",
     "msw": "^2.11.6",
