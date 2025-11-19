@@ -8,6 +8,7 @@ import {
   stylistic,
   typescript,
   unicorn,
+  perfectionist,
 } from '@antfu/eslint-config'
 import betterTailwindcssConfig from '@playground/eslint-config/better-tailwindcss'
 import tsParser from '@typescript-eslint/parser'
@@ -22,6 +23,7 @@ export default combine(
   unicorn(),
   typescript(),
   stylistic(),
+  perfectionist(),
   {
     files: ['**/*.ts'],
     languageOptions: {
