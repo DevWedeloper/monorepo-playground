@@ -1,20 +1,57 @@
 import angularEslintPlugin from '@angular-eslint/eslint-plugin'
-import antfu from '@antfu/eslint-config'
+import {
+  combine,
+  ignores,
+  imports,
+  javascript,
+  node,
+  stylistic,
+  typescript,
+  unicorn,
+} from '@antfu/eslint-config'
+import betterTailwindcssConfig from '@playground/eslint-config/better-tailwindcss'
 import tsParser from '@typescript-eslint/parser'
+import eslintParserAngular from 'angular-eslint'
 
-export default antfu({
-  formatters: true,
-}, {
-  files: ['**/*.ts'],
-  languageOptions: {
-    parser: tsParser,
+export default combine(
+  ignores(),
+  javascript(),
+  node(),
+  imports(),
+  unicorn(),
+  typescript(),
+  stylistic(),
+  {
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tsParser,
+    },
+    plugins: {
+      '@angular-eslint': angularEslintPlugin,
+    },
+    processor: eslintParserAngular.processInlineTemplates,
+    rules: {
+      ...angularEslintPlugin.configs.recommended.rules,
+    },
   },
-  plugins: {
-    '@angular-eslint': angularEslintPlugin,
+  {
+    files: ['**/*.html'],
+    languageOptions: {
+      parser: eslintParserAngular.templateParser,
+    },
+    rules: {
+      'style/no-trailing-spaces': 'off',
+      'style/indent': 'off',
+      'style/no-multiple-empty-lines': 'off',
+      'style/eol-last': 'off',
+      'node/no-deprecated-api': 'off',
+      'node/no-path-concat': 'off',
+    },
   },
-  rules: {
-    ...angularEslintPlugin.configs.recommended.rules,
+  {
+    ...betterTailwindcssConfig,
   },
-}, {
-  ignores: ['.angular/**'],
-})
+  {
+    ignores: ['.angular/**'],
+  },
+)
