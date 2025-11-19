@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type Props = {
+interface Props {
   onAdd: (title: string) => void
 }
 
@@ -28,7 +28,7 @@ export const NoteInput: React.FC<Props> = ({ onAdd }) => {
       />
       <button
         type="submit"
-        className="rounded-lg px-4 py-2 bg-accent"
+        className="bg-accent rounded-lg px-4 py-2"
       >
         Add
       </button>

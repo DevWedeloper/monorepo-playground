@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router'
+import type { Routes } from '@angular/router'
 
 export const routes: Routes = [
   { path: 'notes', loadComponent: () => import('./pages/notes/notes.page').then(m => m.NotesPage) },

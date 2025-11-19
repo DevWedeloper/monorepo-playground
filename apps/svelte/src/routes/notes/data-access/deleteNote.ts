@@ -1,7 +1,7 @@
 import { createMutation, useQueryClient } from '@tanstack/svelte-query'
 import { API_URL } from '../constants/api'
 
-type DeleteNoteInput = { id: number }
+interface DeleteNoteInput { id: number }
 type DeleteNoteOutput = Record<string, never>
 
 export function deleteNoteMutation() {

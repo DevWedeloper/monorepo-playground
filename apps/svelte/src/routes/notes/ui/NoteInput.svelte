@@ -25,7 +25,7 @@
     placeholder='Add a new task...'
     class='flex-1 rounded-lg border px-3 py-2'
   />
-  <button type='submit' class='rounded-lg px-4 py-2 bg-accent'>
+  <button type='submit' class='bg-accent rounded-lg px-4 py-2'>
     Add
   </button>
 </form>

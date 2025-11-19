@@ -1,6 +1,6 @@
+import type { Note } from '../types/notes'
 import { useQuery } from '@tanstack/react-query'
 import { API_URL } from '../constants/api'
-import { Note } from '../types/notes'
 
 export const NOTES_QUERY_KEY = ['notes']
 

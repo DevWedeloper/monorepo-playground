@@ -53,10 +53,10 @@ export default function NotesPage() {
 
   return (
     <div className="flex flex-col items-center p-6">
-      <div className="relative max-w-md rounded-2xl p-6 shadow-lg w-full">
+      <div className="relative w-full max-w-md rounded-2xl p-6 shadow-lg">
         <h1 className="mb-4 text-center text-2xl font-bold">📝 React Notes</h1>
 
-        <div className="flex flex-col items-center mb-4 text-sm">
+        <div className="mb-4 flex flex-col items-center text-sm">
           <h3 className="font-semibold">Data States</h3>
           <pre className="whitespace-pre-wrap" data-testid="success-states">
             {JSON.stringify(
@@ -70,7 +70,7 @@ export default function NotesPage() {
             )}
           </pre>
 
-          <h3 className="font-semibold mt-2">Loading States</h3>
+          <h3 className="mt-2 font-semibold">Loading States</h3>
           <pre data-testid="loading-states">
             {JSON.stringify(
               {
@@ -84,7 +84,7 @@ export default function NotesPage() {
             )}
           </pre>
 
-          <h3 className="font-semibold mt-2">Error States</h3>
+          <h3 className="mt-2 font-semibold">Error States</h3>
           <pre className="whitespace-pre-wrap" data-testid="error-states">
             {JSON.stringify(
               {

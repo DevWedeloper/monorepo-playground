@@ -2,7 +2,7 @@ import type { Note } from '../types/notes'
 import { createMutation, useQueryClient } from '@tanstack/svelte-query'
 import { API_URL } from '../constants/api'
 
-type CreateNoteInput = { title: string }
+interface CreateNoteInput { title: string }
 type CreateNoteOutput = Pick<Note, 'id' | 'title'>
 
 export function createNoteMutation() {

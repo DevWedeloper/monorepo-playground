@@ -1,7 +1,7 @@
+import type { Note } from '../types/notes'
 import { computed, Injectable } from '@angular/core'
 import { injectMutation } from '@ngneat/query'
 import { API_URL } from '../constants/api'
-import { Note } from '../types/notes'
 
 @Injectable({
   providedIn: 'root',

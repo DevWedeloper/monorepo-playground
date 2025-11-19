@@ -1,6 +1,6 @@
+import type { Note } from '../types/notes'
 import { NgClass } from '@angular/common'
 import { ChangeDetectionStrategy, Component, input, linkedSignal, output, signal } from '@angular/core'
-import { Note } from '../types/notes'
 import { AutoFocus } from './auto-focus'
 
 @Component({

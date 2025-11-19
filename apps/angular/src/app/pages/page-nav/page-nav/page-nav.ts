@@ -2,7 +2,7 @@ import { NgClass } from '@angular/common'
 import { Component, ElementRef, inject } from '@angular/core'
 import { PageNavLink } from './page-nav-link'
 
-type SamePageAnchorLink = {
+interface SamePageAnchorLink {
   id: string
   label: string
   isNested: boolean

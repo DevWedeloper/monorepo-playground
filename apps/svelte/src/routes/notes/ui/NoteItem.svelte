@@ -73,7 +73,7 @@
   <button
     type='button'
     onclick={() => onDelete(note.id)}
-    class='ml-2 text-destructive'
+    class='text-destructive ml-2'
   >
     ✕
   </button>

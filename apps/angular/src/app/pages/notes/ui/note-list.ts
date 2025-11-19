@@ -1,5 +1,5 @@
+import type { Note } from '../types/notes'
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core'
-import { Note } from '../types/notes'
 import { NoteItem } from './note-item'
 
 @Component({

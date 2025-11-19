@@ -1,4 +1,5 @@
-import { expect, Locator, Page, test } from '@playwright/test'
+import type { Locator, Page } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 function setup(page: Page) {
   const count: Locator = page.locator('p')

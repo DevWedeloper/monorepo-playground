@@ -4,7 +4,7 @@ import { API_URL } from '../constants/api'
 
 export const NOTES_QUERY_KEY = ['notes']
 
-type FetchNotesArgs = {
+interface FetchNotesArgs {
   fetch?: typeof window.fetch
   signal?: AbortSignal
 }

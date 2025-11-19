@@ -32,10 +32,10 @@
 </script>
 
 <div class='flex flex-col items-center p-6'>
-  <div class='relative max-w-md rounded-2xl p-6 shadow-lg w-full'>
+  <div class='relative w-full max-w-md rounded-2xl p-6 shadow-lg'>
     <h1 class='mb-4 text-center text-2xl font-bold'>📝 Svelte Notes</h1>
 
-    <div class='flex flex-col items-center mb-4 text-sm'>
+    <div class='mb-4 flex flex-col items-center text-sm'>
       <h3 class='font-semibold'>Data States</h3>
       <pre class='whitespace-pre-wrap' data-testid='success-states'>{JSON.stringify(
           {
@@ -48,7 +48,7 @@
         )}
       </pre>
 
-      <h3 class='font-semibold mt-2'>Loading States</h3>
+      <h3 class='mt-2 font-semibold'>Loading States</h3>
       <pre data-testid='loading-states'>{JSON.stringify(
           {
             getNotes: getNotes.isPending,
@@ -61,7 +61,7 @@
         )}
       </pre>
 
-      <h3 class='font-semibold mt-2'>Error States</h3>
+      <h3 class='mt-2 font-semibold'>Error States</h3>
       <pre class='whitespace-pre-wrap' data-testid='error-states'>{JSON.stringify(
           {
             getNotes: getNotes.error,

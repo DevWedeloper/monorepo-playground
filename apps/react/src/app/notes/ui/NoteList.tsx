@@ -1,8 +1,8 @@
+import type { Note } from '../types/notes'
 import React from 'react'
-import { Note } from '../types/notes'
 import { NoteItem } from './NoteItem'
 
-type Props = {
+interface Props {
   notes: Note[]
   onToggle: (payload: { id: number, completed: boolean }) => void
   onDelete: (id: number) => void

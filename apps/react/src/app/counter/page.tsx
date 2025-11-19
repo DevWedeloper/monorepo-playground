@@ -10,8 +10,8 @@ export default function Counter() {
   const reset = () => setCount(0)
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="flex flex-col items-center justify-center gap-4 p-6 bg-background rounded-2xl shadow-sm w-64">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="bg-background flex w-64 flex-col items-center justify-center gap-4 rounded-2xl p-6 shadow-sm">
         <h2 className="text-2xl font-semibold">Counter</h2>
 
         <p className="text-4xl font-bold">{count}</p>
@@ -19,7 +19,7 @@ export default function Counter() {
         <div className="flex gap-3">
           <button
             type="button"
-            className="px-4 py-2 bg-indigo-500 text-white font-medium rounded-xl"
+            className="rounded-xl bg-indigo-500 px-4 py-2 font-medium text-white"
             onClick={increment}
           >
             +
@@ -27,7 +27,7 @@ export default function Counter() {
 
           <button
             type="button"
-            className="px-4 py-2 bg-gray-400 text-white font-medium rounded-xl"
+            className="rounded-xl bg-gray-400 px-4 py-2 font-medium text-white"
             onClick={decrement}
           >
             -
@@ -35,7 +35,7 @@ export default function Counter() {
 
           <button
             type="button"
-            className="px-4 py-2 bg-red-500 text-white font-medium rounded-xl"
+            className="rounded-xl bg-red-500 px-4 py-2 font-medium text-white"
             onClick={reset}
           >
             Reset

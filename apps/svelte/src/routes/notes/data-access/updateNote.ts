@@ -2,7 +2,7 @@ import type { Note } from '../types/notes'
 import { createMutation, useQueryClient } from '@tanstack/svelte-query'
 import { API_URL } from '../constants/api'
 
-type UpdateNoteInput = {
+interface UpdateNoteInput {
   id: number
   title?: string
   completed?: boolean

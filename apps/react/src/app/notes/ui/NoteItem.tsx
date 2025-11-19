@@ -1,8 +1,8 @@
+import type { Note } from '../types/notes'
 import { useEffect, useRef, useState } from 'react'
 import { cn } from '@/utils/cn'
-import { Note } from '../types/notes'
 
-type Props = {
+interface Props {
   note: Note
   onToggle: (payload: { id: number, completed: boolean }) => void
   onDelete: (id: number) => void
@@ -80,7 +80,7 @@ export const NoteItem: React.FC<Props> = ({
       <button
         type="button"
         onClick={() => onDelete(note.id)}
-        className="ml-2 text-destructive"
+        className="text-destructive ml-2"
       >
         ✕
       </button>
