@@ -31,6 +31,8 @@ import { AutoFocus } from './auto-focus'
             class="flex-1 cursor-text"
             [ngClass]="{ 'line-through': note().completed }"
             (click)="isEditing.set(true)"
+            tabindex="0"
+            (keydown.enter)="isEditing.set(true)"
           >
             {{ draft() }}
           </span>
