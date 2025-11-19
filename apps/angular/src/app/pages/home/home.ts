@@ -8,9 +8,9 @@ import { Router, RouterLink } from '@angular/router'
     class: 'block p-8',
   },
   template: `
-    <section class="max-w-3xl mx-auto text-center space-y-8">
+    <section class="mx-auto max-w-3xl space-y-8 text-center">
       <header>
-        <h1 class="text-4xl font-bold text-primary mb-2">
+        <h1 class="text-primary mb-2 text-4xl font-bold">
           Welcome to Angular Playground!
         </h1>
         <p class="text-muted-foreground text-lg">
@@ -18,14 +18,14 @@ import { Router, RouterLink } from '@angular/router'
         </p>
       </header>
 
-      <hr class="border-t border-border my-6" />
+      <hr class="border-border my-6 border-t" />
 
-      <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <ul class="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         @for (route of routes; track route) {
           <li>
             <a
               [routerLink]="route"
-              class="block p-4 rounded-lg border border-border bg-card hover:bg-accent hover:text-accent-foreground shadow-sm transition-all duration-200"
+              class="border-border bg-card block rounded-lg border p-4 shadow-sm transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
             >
               /{{ route }}
             </a>

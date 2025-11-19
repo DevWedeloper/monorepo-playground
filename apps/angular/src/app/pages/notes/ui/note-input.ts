@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms'
       />
       <button
         type="submit"
-        class="rounded-lg px-4 py-2 bg-accent"
+        class="bg-accent rounded-lg px-4 py-2"
       >
         Add
       </button>
@@ -26,13 +26,13 @@ import { FormsModule } from '@angular/forms'
 export class NoteInput {
   value = signal('')
 
-  onAdd = output<string>()
+  addChange = output<string>()
 
   handleSubmit(): void {
     const trimmed = this.value().trim()
     if (!trimmed)
       return
-    this.onAdd.emit(trimmed)
+    this.addChange.emit(trimmed)
     this.value.set('')
   }
 }

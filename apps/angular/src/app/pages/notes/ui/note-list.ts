@@ -14,9 +14,9 @@ import { NoteItem } from './note-item'
           <li>
             <playground-note-item
               [note]="note"
-              (onToggle)="onToggle.emit($event)"
-              (onDelete)="onDelete.emit($event)"
-              (onEdit)="onEdit.emit({ id: $event.id, title: $event.title })"
+              (toggleChange)="toggleChange.emit($event)"
+              (deleteChange)="deleteChange.emit($event)"
+              (editChange)="editChange.emit({ id: $event.id, title: $event.title })"
             />
           </li>
         }
@@ -28,7 +28,7 @@ import { NoteItem } from './note-item'
 export class NoteList {
   notes = input.required<Note[]>()
 
-  onToggle = output<{ id: number, completed: boolean }>()
-  onDelete = output<number>()
-  onEdit = output<{ id: number, title: string }>()
+  toggleChange = output<{ id: number, completed: boolean }>()
+  deleteChange = output<number>()
+  editChange = output<{ id: number, title: string }>()
 }

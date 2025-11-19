@@ -17,7 +17,7 @@ import { NoteList } from './ui/note-list'
     <div class="relative max-w-md rounded-2xl p-6 shadow-lg">
       <h1 class="mb-4 text-center text-2xl font-bold">📝 Angular Notes</h1>
 
-      <div class="flex flex-col items-center mb-4">
+      <div class="mb-4 flex flex-col items-center">
         <h3>Data States</h3>
         <pre class="whitespace-pre-wrap">{{ {
           deleteNote: dataDeleteNote() || null,
@@ -43,13 +43,13 @@ import { NoteList } from './ui/note-list'
       </div>
 
       <playground-note-input
-        (onAdd)="onAdd($event)"
+        (addChange)="onAdd($event)"
       />
       <playground-note-list
         [notes]="notes()"
-        (onToggle)="onToggle($event)"
-        (onDelete)="onDelete($event)"
-        (onEdit)="onEdit($event)"
+        (toggleChange)="onToggle($event)"
+        (deleteChange)="onDelete($event)"
+        (editChange)="onEdit($event)"
       />
     </div>
   `,

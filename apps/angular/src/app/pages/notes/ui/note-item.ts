@@ -12,7 +12,7 @@ import { AutoFocus } from './auto-focus'
         <input
           type="checkbox"
           [checked]="note().completed"
-          (change)="onToggle.emit({ id: note().id, completed: !note().completed })"
+          (change)="toggleChange.emit({ id: note().id, completed: !note().completed })"
         />
 
         @if (isEditing()) {
@@ -39,8 +39,8 @@ import { AutoFocus } from './auto-focus'
 
       <button
         type="button"
-        (click)="onDelete.emit(note().id)"
-        class="ml-2 text-destructive"
+        (click)="deleteChange.emit(note().id)"
+        class="text-destructive ml-2"
       >
         ✕
       </button>
@@ -51,9 +51,9 @@ import { AutoFocus } from './auto-focus'
 export class NoteItem {
   note = input.required<Note>()
 
-  onToggle = output<{ id: number, completed: boolean }>()
-  onDelete = output<number>()
-  onEdit = output<{ id: number, title: string }>()
+  toggleChange = output<{ id: number, completed: boolean }>()
+  deleteChange = output<number>()
+  editChange = output<{ id: number, title: string }>()
 
   protected isEditing = signal(false)
   protected draft = linkedSignal(() => this.note().title)
@@ -61,7 +61,7 @@ export class NoteItem {
   protected handleEdit(): void {
     const trimmed = this.draft().trim()
     if (trimmed !== this.note().title) {
-      this.onEdit.emit({ id: this.note().id, title: trimmed })
+      this.editChange.emit({ id: this.note().id, title: trimmed })
     }
     this.isEditing.set(false)
   }
