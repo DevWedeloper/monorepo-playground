@@ -8,6 +8,8 @@ import {
   javascript,
   node,
   perfectionist,
+  sortPackageJson,
+  sortTsconfig,
   stylistic,
   typescript,
   unicorn,
@@ -24,6 +26,8 @@ export default combine(
   typescript(),
   stylistic(),
   perfectionist(),
+  sortPackageJson(),
+  sortTsconfig(),
   {
     files: ['**/*.ts'],
     languageOptions: {
